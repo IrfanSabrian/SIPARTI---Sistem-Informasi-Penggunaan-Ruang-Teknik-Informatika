@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styless.css" />
+    <link rel="icon" type="img/png" href="img/assets/Icon.png" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img/assets/Logo.png" alt="Logo" /></a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedules</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="login">
+          <a id="login-link" href="login.html">Login</a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+    <!-- Content Section Start -->
+<section class="dashboard-content">
+    <div class="sidedashboard">
+        <button id="add-row-btn" class="add-row-btn">Add Row</button>
+        <h3>Filter by</h3>
+        
+        <!-- Filter Selection -->
+        <div id="filter">
+            <label>
+                <input type="radio" name="filter" value="none" checked> None
+            </label><br>
+            <label>
+                <input type="radio" name="filter" value="day"> Day
+            </label><br>
+            <label>
+            <label>
+                <input type="radio" name="filter" value="ruang"> Ruang
+            </label><br>
+        </div>
+        
+        <!-- Day Filter -->
+        <div id="day-filter" class="filter-option" style="display:none;">
+            
+          <br><h4>Day</h4>
+            <select id="day-select">
+                <option value="all">All Days</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+            </select>
+        </div>
+        
+        <!-- Semester Filter -->
+        <div id="semester-filter" class="filter-option" style="display:none;">
+            <br><h4>Semester</h4>
+            <select id="semester-select">
+                <option value="all">All Semesters</option>
+                <option value="Semester 2">Semester 2</option>
+                <option value="Semester 4">Semester 4</option>
+                <option value="Semester 6">Semester 6</option>
+            </select>
+        </div>
+        
+        <!-- Ruang Filter -->
+        <div id="ruang-filter" class="filter-option" style="display:none;">
+            <br><h4>Ruang</h4>
+            <select id="ruang-select">
+                <option value="all">All Ruang</option>
+                <option value="TI-1">TI-1</option>
+                <option value="TI-2">TI-2</option>
+                <option value="TI-3">TI-3</option>
+                <option value="TI-4">TI-4</option>
+                <option value="TI-5">TI-5</option>
+                <option value="TI-6">TI-6</option>
+                <option value="TI-7">TI-7</option>
+                <option value="TI-8">TI-8</option>
+                <option value="TI-9">TI-9</option>
+                <option value="TI-10">TI-10</option>
+                <option value="TI-11">TI-11</option>
+                <option value="TI-12">TI-12</option>
+                <option value="TI-13">TI-13</option>
+                <option value="TI-14">TI-14</option>
+            </select>
+        </div>
+        
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </div>
+    <div class="main-content">
+        <table id="schedule-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Semester</th>
+                    <th>Kelas</th>
+                    <th>Makul</th>
+                    <th>Dosen</th>
+                    <th>Ruang</th>
+                    <th>Waktu Mulai</th>
+                    <th>Waktu Selesai</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Jadwal akan ditampilkan di sini -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="add-row-modal" class="modal_dash">
+  <div class="modal-content_dash">
+    <span class="close-dash">&times;</span>
+    <form id="add-row-form">
+      <label for="day">Day</label>
+      <select id="day" name="day">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+      </select>
+
+      <label for="semester">Semester</label>
+      <select id="semester" name="semester">
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+      </select>
+
+      <label for="class">Kelas</label>
+      <select id="class" name="class">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+      </select>
+
+      <label for="course">Makul</label>
+      <input type="text" id="course" name="course" required>
+
+      <label for="lecturer">Dosen</label>
+      <input type="text" id="lecturer" name="lecturer" required>
+
+      <label for="room">Ruang</label>
+      <select id="room" name="room">
+        <option value="TI-1">TI-1</option>
+        <option value="TI-2">TI-2</option>
+        <option value="TI-3">TI-3</option>
+        <option value="TI-4">TI-4</option>
+        <option value="TI-5">TI-5</option>
+        <option value="TI-6">TI-6</option>
+        <option value="TI-7">TI-7</option>
+        <option value="TI-8">TI-8</option>
+        <option value="TI-9">TI-9</option>
+        <option value="TI-10">TI-10</option>
+        <option value="TI-11">TI-11</option>
+        <option value="TI-12">TI-12</option>
+        <option value="TI-13">TI-13</option>
+        <option value="TI-14">TI-14</option>
+      </select>
+
+      <label for="start-time">Waktu Mulai</label>
+      <input type="time" id="start-time" name="start-time" required>
+
+      <label for="end-time">Waktu Selesai</label>
+      <input type="time" id="end-time" name="end-time" required>
+
+      <button type="submit" id="save-btn">Save</button>
+    </form>
+  </div>
+</div>    
+<!-- Footer Section Start -->
+    <footer>
+      <div class="footer-container">
+        <img src="/img/assets/Logo.png" />
+        <div class="footer-content">
+          <h4>Politeknik Negeri Pontianak</h4>
+          <p>
+            <i class="bx bx-home-circle"></i> Jl. Jenderal Ahmad Yani, Bansir
+            Laut, Pontianak Tenggara, Kota Pontianak, Kalimantan Barat 78124
+          </p>
+          <p><i class="bx bx-envelope"></i> polnepcs@gmail.com</p>
+        </div>
+        <div class="footer-content">
+          <h4>Contact Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bx-envelope"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-tiktok"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy; 2024 Polnep Classroom Schedule. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="dashboardscript.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const username = localStorage.getItem('username');
+  const loginLink = document.getElementById('login-link');
+  const logoutButton = document.getElementById('logout-btn');
+
+  if (username) {
+    loginLink.textContent = username;
+    loginLink.href = 'index.html';
+
+    logoutButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      localStorage.removeItem('username');
+      window.location.href = 'index.html';
+    });
+  }
+});
+  </script>
+  </body>
+</html>

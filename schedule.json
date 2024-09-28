@@ -1,0 +1,803 @@
+{
+  "semester_2": {
+    "Monday": [
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Struktur Data",
+        "dosen": "Mariana Syamsudin",
+        "ruang": "TI-6",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Struktur Data",
+        "dosen": "Pausta Yugianus",
+        "ruang": "TI-7",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Basis Data",
+        "dosen": "Nenny Firdyanti",
+        "ruang": "TI-8",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Basis Data",
+        "dosen": "Sarah Bibi",
+        "ruang": "TI-9",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Budianingsih",
+        "ruang": "TI-10",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Tuesday": [
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Suheri",
+        "ruang": "TI-4",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Basis Data",
+        "dosen": "Nenny Firdyanti",
+        "ruang": "TI-7",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Struktur Data",
+        "dosen": "Sarah Bibi",
+        "ruang": "TI-8",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Budianingsih",
+        "ruang": "TI-9",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Matematika",
+        "dosen": "Ramli",
+        "ruang": "TI-10",
+        "start_time": "07.00",
+        "end_time": "09.30"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Bahasa Indonesia",
+        "dosen": "Sajidin",
+        "ruang": "TI-10",
+        "start_time": "10.00",
+        "end_time": "11.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Statistik dan Probabilitas",
+        "dosen": "Mariana Syamsudin",
+        "ruang": "TI-10",
+        "start_time": "12.30",
+        "end_time": "15.00"
+      }
+    ],
+    "Wednesday": [
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Arsitektur Komputer",
+        "dosen": "Pausta Yugianus",
+        "ruang": "TI-6",
+        "start_time": "07.00",
+        "end_time": "11.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Matematika",
+        "dosen": "Ramli",
+        "ruang": "TI-6",
+        "start_time": "12.30",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Suheri",
+        "ruang": "TI-7",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Matematika",
+        "dosen": "Ramli",
+        "ruang": "TI-8",
+        "start_time": "10.00",
+        "end_time": "13.20"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Statistik dan Probabilitas",
+        "dosen": "Mariana Syamsudin",
+        "ruang": "TI-8",
+        "start_time": "13.20",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Bahasa Indonesia",
+        "dosen": "Sajidin",
+        "ruang": "TI-8",
+        "start_time": "15.00",
+        "end_time": "16.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Struktur Data",
+        "dosen": "Sarah Bibi",
+        "ruang": "TI-9",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Basis Data",
+        "dosen": "Nenny Firdyanti",
+        "ruang": "TI-10",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Thursday": [
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Basis Data",
+        "dosen": "Nenny Firdyanti",
+        "ruang": "TI-6",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Arsitektur Komputer",
+        "dosen": "Pausta Yugianus",
+        "ruang": "TI-7",
+        "start_time": "07.00",
+        "end_time": "11.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Matematika 2",
+        "dosen": "Ramli",
+        "ruang": "TI-7",
+        "start_time": "12.30",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Suheri",
+        "ruang": "TI-8",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Arsitektur Komputer",
+        "dosen": "Muhammad Diponegoro",
+        "ruang": "TI-9",
+        "start_time": "07.00",
+        "end_time": "11.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Budianingsih",
+        "ruang": "TI-9",
+        "start_time": "12.30",
+        "end_time": "14.10"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Struktur Data",
+        "dosen": "Sarah Bibi",
+        "ruang": "TI-10",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Friday": [
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Statistik dan Probabilitas",
+        "dosen": "Muhammad Diponegoro",
+        "ruang": "TI-6",
+        "start_time": "07.00",
+        "end_time": "08.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Suheri",
+        "ruang": "TI-6",
+        "start_time": "09.45",
+        "end_time": "11.25"
+      },
+      {
+        "semester": "2",
+        "kelas": "A",
+        "makul": "Bahasa Indonesia",
+        "dosen": "Sajidin",
+        "ruang": "TI-6",
+        "start_time": "13.00",
+        "end_time": "14.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Bahasa Indonesia",
+        "dosen": "Sajidin",
+        "ruang": "TI-7",
+        "start_time": "07.00",
+        "end_time": "08.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Statistik dan Probabilitas",
+        "dosen": "Mariana Syamsudin",
+        "ruang": "TI-7",
+        "start_time": "09.45",
+        "end_time": "11.25"
+      },
+      {
+        "semester": "2",
+        "kelas": "B",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Suheri",
+        "ruang": "TI-7",
+        "start_time": "13.00",
+        "end_time": "14.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Suheri",
+        "ruang": "TI-8",
+        "start_time": "07.00",
+        "end_time": "08.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "C",
+        "makul": "Arsitektur Komputer",
+        "dosen": "Pausta Yugianus",
+        "ruang": "TI-8",
+        "start_time": "08.40",
+        "end_time": "14.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Matematika",
+        "dosen": "Ramli",
+        "ruang": "TI-9",
+        "start_time": "07.00",
+        "end_time": "09.30"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Bahasa Indonesia",
+        "dosen": "Sajidin",
+        "ruang": "TI-9",
+        "start_time": "09.45",
+        "end_time": "11.25"
+      },
+      {
+        "semester": "2",
+        "kelas": "D",
+        "makul": "Statistik dan Probabilitas",
+        "dosen": "Muhammad Diponegoro",
+        "ruang": "TI-9",
+        "start_time": "13.00",
+        "end_time": "14.40"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Arsitektur Komputer",
+        "dosen": "Suharsono",
+        "ruang": "TI-10",
+        "start_time": "07.00",
+        "end_time": "11.25"
+      },
+      {
+        "semester": "2",
+        "kelas": "E",
+        "makul": "Pemrograman Berorientasi Objek",
+        "dosen": "Budianingsih",
+        "ruang": "TI-10",
+        "start_time": "13.00",
+        "end_time": "14.40"
+      }
+    ]
+  },
+  "semester_4": {
+    "Monday": [
+      {
+        "semester": "4",
+        "kelas": "A",
+        "makul": "Jaringan Komputer Dasar",
+        "dosen": "Novi Aryani Fitri",
+        "ruang": "TI-1",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      },
+      {
+        "semester": "4",
+        "kelas": "B",
+        "makul": "Jaringan Komputer Dasar",
+        "dosen": "Muhammad Diponegoro",
+        "ruang": "TI-4",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      },
+      {
+        "semester": "4",
+        "kelas": "C",
+        "makul": "Grafika Komputer",
+        "dosen": "Muhammad Hasbi",
+        "ruang": "TI-12",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "4",
+        "kelas": "D",
+        "makul": "Desain Web",
+        "dosen": "Ferry Faisal",
+        "ruang": "TI-13",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "4",
+        "kelas": "E",
+        "makul": "Pemrograman Mobile",
+        "dosen": "Fitri Wibowo",
+        "ruang": "TI-14",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      }
+    ],
+    "Tuesday": [
+      {
+        "semester": "4",
+        "kelas": "A",
+        "makul": "Desain Web",
+        "dosen": "Ferry Faisal",
+        "ruang": "TI-11",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "4",
+        "kelas": "B",
+        "makul": "Pemrograman Mobile",
+        "dosen": "Fitri Wibowo",
+        "ruang": "TI-14",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      },
+      {
+        "semester": "4",
+        "kelas": "C",
+        "makul": "Jaringan Komputer Dasar",
+        "dosen": "Muhammad Diponegoro",
+        "ruang": "TI-5",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      },
+      {
+        "semester": "4",
+        "kelas": "D",
+        "makul": "Grafika Komputer",
+        "dosen": "Muhammad Hasbi",
+        "ruang": "TI-12",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "4",
+        "kelas": "E",
+        "makul": "Jaringan Komputer Dasar",
+        "dosen": "Yasir Arafat",
+        "ruang": "TI-13",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      }
+    ],
+    "Wednesday": [
+      {
+        "semester": "4",
+        "kelas": "A",
+        "makul": "Pemrograman Mobile",
+        "dosen": "Safri Adam",
+        "ruang": "TI-14",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      },
+      {
+        "semester": "4",
+        "kelas": "B",
+        "makul": "Desain Web",
+        "dosen": "Ferry Faisal",
+        "ruang": "TI-11",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "4",
+        "kelas": "C",
+        "makul": "Desain Web",
+        "dosen": "Budianingsih",
+        "ruang": "TI-12",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "4",
+        "kelas": "D",
+        "makul": "Jaringan Komputer Dasar",
+        "dosen": "Yasir Arafat",
+        "ruang": "TI-13",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      },
+      {
+        "semester": "4",
+        "kelas": "E",
+        "makul": "Bahasa Inggris 2",
+        "dosen": "Prof. Dr. Adi Marwan",
+        "ruang": "TI-3",
+        "start_time": "07.50",
+        "end_time": "11.40"
+      }
+    ],
+    "Thursday": [
+      {
+        "semester": "4",
+        "kelas": "A",
+        "makul": "Bahasa Inggris 2",
+        "dosen": "Prof. Dr. Adi Marwan",
+        "ruang": "TI-3",
+        "start_time": "07.50",
+        "end_time": "11.40"
+      },
+      {
+        "semester": "4",
+        "kelas": "B",
+        "makul": "Grafika Komputer",
+        "dosen": "Muhammad Hasbi",
+        "ruang": "TI-13",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "4",
+        "kelas": "C",
+        "makul": "Pemrograman Mobile",
+        "dosen": "Safri Adam",
+        "ruang": "TI-14",
+        "start_time": "07.00",
+        "end_time": "15.50"
+      },
+      {
+        "semester": "4",
+        "kelas": "D",
+        "makul": "Bahasa Inggris 2",
+        "dosen": "Nurul Fadilah",
+        "ruang": "TI-3",
+        "start_time": "10.00",
+        "end_time": "14.10"
+      },
+      {
+        "semester": "4",
+        "kelas": "E",
+        "makul": "Desain Web",
+        "dosen": "Ferry Faisal",
+        "ruang": "TI-11",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Friday": [
+      {
+        "semester": "4",
+        "kelas": "A",
+        "makul": "Grafika Komputer",
+        "dosen": "Tri Bowo Atmojo",
+        "ruang": "TI-13",
+        "start_time": "07.00",
+        "end_time": "16.20"
+      },
+      {
+        "semester": "4",
+        "kelas": "B",
+        "makul": "Bahasa Inggris 2",
+        "dosen": "Indah Anjar Reski",
+        "ruang": "TI-2",
+        "start_time": "10.35",
+        "end_time": "16.20"
+      },
+      {
+        "semester": "4",
+        "kelas": "C",
+        "makul": "Bahasa Inggris 2",
+        "dosen": "Nurul Fadilah",
+        "ruang": "TI-3",
+        "start_time": "10.35",
+        "end_time": "16.20"
+      },
+      {
+        "semester": "4",
+        "kelas": "D",
+        "makul": "Pemrograman Mobile",
+        "dosen": "Fitri Wibowo",
+        "ruang": "TI-14",
+        "start_time": "07.00",
+        "end_time": "16.20"
+      },
+      {
+        "semester": "4",
+        "kelas": "E",
+        "makul": "Grafika Komputer",
+        "dosen": "Muhammad Hasbi",
+        "ruang": "TI-12",
+        "start_time": "07.00",
+        "end_time": "16.20"
+      }
+    ]
+  },
+  "semester_6": {
+    "Monday": [
+      {
+        "semester": "6",
+        "kelas": "B",
+        "makul": "Pengolahan Citra Digital",
+        "dosen": "Tri Bowo Atmojo",
+        "ruang": "TI-2",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "C",
+        "makul": "Komputer Animasi",
+        "dosen": "Tommi Suryanto",
+        "ruang": "TI-3",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "E",
+        "makul": "Sistem Keamanan Informasi",
+        "dosen": "Yasir Arafat",
+        "ruang": "TI-5",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Tuesday": [
+      {
+        "semester": "6",
+        "kelas": "A",
+        "makul": "Komputer Animasi",
+        "dosen": "Tommi Suryanto",
+        "ruang": "TI-1",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "B",
+        "makul": "Sistem Keamanan Informasi",
+        "dosen": "Lindung Siswanto",
+        "ruang": "TI-2",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "C",
+        "makul": "Pengolahan Citra Digital",
+        "dosen": "Tri Bowo Atmojo",
+        "ruang": "TI-3",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "D",
+        "makul": "Pengolahan Citra Digital",
+        "dosen": "Safri Adam",
+        "ruang": "TI-4",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Wednesday": [
+      {
+        "semester": "6",
+        "kelas": "A",
+        "makul": "Pengolahan Citra Digital",
+        "dosen": "Satriyo",
+        "ruang": "TI-1",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "B",
+        "makul": "Kewarganegaraan",
+        "dosen": "Grace Kelly Hadiputri Sihombing",
+        "ruang": "TI-2",
+        "start_time": "13.20",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "C",
+        "makul": "Kewarganegaraan",
+        "dosen": "Siti Aisyah",
+        "ruang": "TI-3",
+        "start_time": "13.20",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "D",
+        "makul": "Sistem Keamanan Informasi",
+        "dosen": "Novi Aryani Fitri",
+        "ruang": "TI-4",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "E",
+        "makul": "Komputer Animasi",
+        "dosen": "Suharsono",
+        "ruang": "TI-5",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Thursday": [
+      {
+        "semester": "6",
+        "kelas": "A",
+        "makul": "Kewarganegaraan",
+        "dosen": "Grace Kelly Hadiputri Sihombing",
+        "ruang": "TI-1",
+        "start_time": "13.20",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "B",
+        "makul": "Komputer Animasi",
+        "dosen": "Tommi Suryanto",
+        "ruang": "TI-2",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "D",
+        "makul": "Komputer Animasi",
+        "dosen": "Suharsono",
+        "ruang": "TI-4",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "E",
+        "makul": "Pengolahan Citra Digital",
+        "dosen": "Tri Bowo Atmojo",
+        "ruang": "TI-5",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      }
+    ],
+    "Friday": [
+      {
+        "semester": "6",
+        "kelas": "A",
+        "makul": "Sistem Keamanan Informasi",
+        "dosen": "Lindung Siswanto",
+        "ruang": "TI-1",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "C",
+        "makul": "Sistem Keamanan Informasi",
+        "dosen": "Novi Aryani Fitri",
+        "ruang": "TI-3",
+        "start_time": "07.00",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "D",
+        "makul": "Kewarganegaraan",
+        "dosen": "Siti Aisyah",
+        "ruang": "TI-4",
+        "start_time": "13.20",
+        "end_time": "15.00"
+      },
+      {
+        "semester": "6",
+        "kelas": "E",
+        "makul": "Kewarganegaraan",
+        "dosen": "Grace Kelly Hadiputri Sihombing",
+        "ruang": "TI-5",
+        "start_time": "13.20",
+        "end_time": "15.00"
+      }
+    ]
+  }
+}

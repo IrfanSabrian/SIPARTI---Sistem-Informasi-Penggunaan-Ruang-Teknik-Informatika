@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schedules - Classroom Schedule</title>
+  <link rel="stylesheet" href="styless.css" />
+  <link rel="icon" type="image/png" href="img/assets/Icon.png">
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+      .logout-notification {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+      .logout-notification a {
+        color: #156689;
+        text-decoration: none;
+      }
+      .logout-notification a:hover {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="img/assets/Logo.png" alt="Logo" /></a>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Schedules</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="login">
+        <a id="login-link" href="login.html">Login</a>
+        <div class="logout-notification" id="logout-notification">
+          <a href="#" id="logout-link">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+  <section class="schedule" id="schedule">
+    <div class="content">
+    <div class="layout">
+        <span class="sidebar-toggle material-symbols-outlined">arrow_forward_ios</span>
+        <div class="sidebar">
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button id="prev-month">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <h2 id="month-year"></h2>
+                    <button id="next-month">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+                <div class="calendar">
+                    <div class="day-names">
+                        <div>S</div>
+                        <div>M</div>
+                        <div>T</div>
+                        <div>W</div>
+                        <div>T</div>
+                        <div>F</div>
+                        <div>S</div>
+                    </div>
+                    <div class="dates" id="dates"></div>
+                </div>
+            </div>
+        </div>
+        <section class="live-schedules">
+            <div class="content">
+                <div class="title"><span>Schedules</span></div>
+                <div id="roomModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2 id="roomTitle"></h2>
+                        <p id="roomInfo" class="room-info"></p>
+                    </div>
+                </div>
+                <div class="live">
+                    <div id="current-time"></div>
+                </div>
+                <div class="container-schedules">
+                    <div class="building theory">
+                        <h2>Theory Building</h2>
+                        <div class="encompassing-box">
+                            <div class="floor">
+                                <div class="class TI4" id="TI4">TI 4</div>
+                                <div class="class TI3" id="TI3">TI 3</div>
+                                <div class="class TI2" id="TI2">TI 2</div>
+                                <div class="class TI1" id="TI1">TI 1</div>
+                                <div class="spacer"></div>
+                                <div class="class TI5" id="TI5">TI 5</div>
+                                <div class="class TI6" id="TI6">TI 6</div>
+                                <div class="spacer"></div>
+                                <div class="class TI7" id="TI7">TI 7</div>
+                                <div class="class TI8" id="TI8">TI 8</div>
+                                <div class="class TI9" id="TI9">TI 9</div>
+                                <div class="class TI10" id="TI10">TI 10</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="building lab">
+                        <h2>Lab Comp Building</h2>
+                        <div class="lab-container">
+                            <div>
+                                <div class="floor-label">Floor 2</div>
+                                <div class="encompassing-box">
+                                    <div class="floor lab-floor">
+                                        <div class="spacer"></div>
+                                        <div class="spacer"></div>
+                                        <div class="class TI11" id="TI11">TI 11</div>
+                                        <div class="spacer"></div>
+                                        <div class="spacer"></div>
+                                        <div class="class TI12" id="TI12">TI 12</div>
+                                        <div class="spacer"></div>
+                                        <div class="spacer"></div>
+                                        <div class="class TI13" id="TI13">TI 13</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="floor-label">Floor 1</div>
+                                <div class="encompassing-box">
+                                    <div class="floor lab-floor-single">
+                                        <div class="spacer"></div>
+                                        <div class="spacer"></div>
+                                        <div class="class TI14" id="TI14">TI 14</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+  </section>
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="footer-container">
+      <img src="img/assets/Logo.png">
+      <div class="footer-content">
+        <h4>Politeknik Negeri Pontianak</h4>
+        <p><i class='bx bx-home-circle'></i> Jl. Jenderal Ahmad Yani, Bansir Laut, Pontianak Tenggara, Kota Pontianak, Kalimantan Barat 78124</p>
+        <p><i class='bx bx-envelope'></i> polnepcs@gmail.com</p>
+      </div>
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <ul class="social-icons">
+          <li><a href="#" target="_blank"><i class='bx bx-envelope'></i></a></li>
+          <li><a href="#" target="_blank"><i class='bx bxl-whatsapp'></i></a></li>
+        </ul>
+      </div>   
+      <div class="footer-content">
+        <h4>Follow Us</h4>
+        <ul class="social-icons">
+          <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+          <li><a href="#" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+          <li><a href="#" target="_blank"><i class='bx bxl-tiktok'></i></a></li>
+          <li><a href="#" target="_blank"><i class='bx bxl-youtube'></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <p>&copy; 2024 Polnep Classroom Schedule. All rights reserved.</p>
+    </div> 
+  </footer>
+  <script src="schedulescript.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const username = localStorage.getItem("username");
+    const loginLink = document.getElementById("login-link");
+
+    if (username) {
+      // Tampilkan username pada tombol login dan arahkan ke dashboard.html
+      loginLink.textContent = username;
+      loginLink.href = "dashboard.html";
+    }
+  });
+</script>
+</body>
+</html>

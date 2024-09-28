@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Classroom Schedule</title>
+    <link rel="stylesheet" href="styless.css" />
+    <link rel="icon" type="img/png" href="img/assets/Icon.png" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img/assets/Logo.png" alt="Logo" /></a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Jadwal</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="login">
+          <a id="login-link" href="login.html">Login</a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="text">
+          <div class="text-one">Selamat Datang di Website</div>
+          <div class="text-two">SIPARTI</div>
+          <div class="text-three">Sistem Informasi Penggunaan</div>
+          <div class="text-three">Ruang Teknik Informatika</div>
+        </div>
+        <div class="button">
+          <a href="schedule.html"><button>Lihat Jadwal</button></a>
+        </div>
+      </div>
+    </section>
+    <!-- Live Section Start -->
+    <section class="live-schedule" id="">
+      <div class="content">
+        <div class="title"><span>Live Schedules</span></div>
+        <div id="roomModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="roomTitle">Ruangan</h2>
+            <p id="roomInfo" class="room-info">Informasi ruangan...</p>
+          </div>
+        </div>
+        <div class="live">
+          <div id="current-time"></div>
+        </div>
+        <div class="container">
+          <div class="building theory">
+            <h2>Gedung Teori</h2>
+            <div class="encompassing-box">
+              <div class="floor">
+                <div class="class TI1" id="TI1">TI 1</div>
+                <div class="spacer"></div>
+                <div class="R28" id="R28">Ruang 28</div>
+                <div class="R27" id="R27">Ruang 27</div>
+                <div class="AB17" id="AB17">AB 1.7</div>
+                <div class="AB18" id="AB18">AB 1.8</div>
+                <div class="AB19" id="AB19">AB 1.9</div>
+                <div class="spacer"></div>
+                <div class="class TI10" id="TI10">TI 10</div>
+                <div class="class TI2" id="TI2">TI 2</div>
+                <div class="class TI9" id="TI9">TI 9</div>
+                <div class="class TI3" id="TI3">TI 3</div>
+                <div class="class TI8" id="TI8">TI 8</div>
+                <div class="class TI4" id="TI4">TI 4</div>
+                <div class="spacer"></div>
+                <div class="class TI7" id="TI7">TI 7</div>
+                <div class="class TI5" id="TI5">TI 5</div>
+                <div class="class TI6" id="TI6">TI 6</div>
+                <div class="AB15" id="AB15">AB 1.5</div>
+                <div class="AB16" id="AB16">AB 1.6</div>
+                <div class="AB110" id="AB110">AB 1.10</div>
+              </div>
+            </div>
+          </div>
+          <div class="building lab">
+            <h2>Lab Computer</h2>
+            <div class="encompassing-box_lab1" id="box1">
+              <div class="floor">
+                <div class="ruangDosen1">Ruang Dosen</div>
+                <div class="ruangDosen2">Ruang Dosen</div>
+                <div class="class TI14" id="TI14">TI 14</div>
+                <div class="toilet">Toilet</div>
+                <div class="ruangTeknisi1">Ruang Teknisi</div>
+                <div class="stairs1" onclick="showLab2()"></div>
+              </div>
+            </div>
+            <div class="encompassing-box_lab2" id="box2" style="display: none">
+              <div class="floor">
+                <div class="stairs2" onclick="showLab1()"></div>
+                <div class="class TI11" id="TI11">TI 11</div>
+                <div class="class TI12" id="TI12">TI 12</div>
+                <div class="class TI13" id="TI13">TI 13</div>
+                <div class="ruangTeknisi2">Ruang Teknisi</div>
+              </div>
+            </div>
+            <div class="sample">
+              <div class="color-circle red"></div>
+              <p>Sedang digunakan</p>
+            </div>
+            <div class="sample">
+              <div class="color-circle green"></div>
+              <p>Tidak digunakan</p>
+            </div>
+            <div class="sample">
+              <div class="color-circle white"></div>
+              <p>Tidak tersedia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kelas Kosong Section -->
+    <section></section>
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="footer-container">
+        <img src="/img/assets/Logo.png" />
+        <div class="footer-content">
+          <h4>Politeknik Negeri Pontianak</h4>
+          <p>
+            <i class="bx bx-home-circle"></i> Jl. Jenderal Ahmad Yani, Bansir
+            Laut, Pontianak Tenggara, Kota Pontianak, Kalimantan Barat 78124
+          </p>
+          <p><i class="bx bx-envelope"></i>sipartipolnep@gmail.com</p>
+        </div>
+        <div class="footer-content">
+          <h4>Contact Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bx-envelope"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-tiktok"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <p>&copy; 2024 SIPARTI Polnep. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const username = localStorage.getItem("username");
+        const loginLink = document.getElementById("login-link");
+        if (username) {
+          // Tampilkan username pada tombol login dan arahkan ke dashboard.html
+          loginLink.textContent = username;
+          loginLink.href = "dashboard.html";
+        }
+      });
+    </script>
+  </body>
+</html>
