@@ -127,15 +127,30 @@ nav.sticky .menu-btn {
 
 /* home section styling */
 .home {
+  position: relative; /* Mengatur posisi relative untuk mengatur layer */
   height: 100vh;
   width: 100%;
-  background: url("img/assets/Background.png") no-repeat;
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden; /* Mencegah elemen keluar dari batas */
+}
+.background-layer {
+  position: absolute; /* Mengatur posisi absolute untuk layer latar belakang */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("img/assets/Background1.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-family: "Ubuntu", sans-serif;
+  opacity: 0.5;
+  filter: blur(3px);
+  z-index: 1; /* Mengatur z-index agar layer berada di belakang konten */
+  transition: background 4s ease;
 }
 .home .home-content {
+  position: relative; /* Mengatur posisi relative untuk konten */
+  z-index: 2; /* Mengatur z-index agar konten berada di depan layer */
   width: 90%;
   height: 100%;
   margin: auto;
@@ -159,6 +174,11 @@ nav.sticky .menu-btn {
   font-size: 40px;
   margin: 5px 0;
   color: #156689;
+}
+.home .text-four {
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0e2431;
 }
 .home .button {
   margin: 14px 0;
@@ -836,6 +856,7 @@ body {
     max-width: 400px;
     width: 100%;
     padding-top: 60px;
+    margin-left: 200px;
     flex-direction: column;
     align-items: center;
     transition: all 0.5s ease;
