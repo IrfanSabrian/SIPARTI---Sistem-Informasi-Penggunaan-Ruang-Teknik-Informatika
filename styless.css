@@ -134,7 +134,7 @@ nav.sticky .menu-btn {
   overflow: hidden; /* Mencegah elemen keluar dari batas */
 }
 .background-layer {
-  position: absolute; /* Mengatur posisi absolute untuk layer latar belakang */
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -143,10 +143,10 @@ nav.sticky .menu-btn {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.5;
-  filter: blur(3px);
-  z-index: 1; /* Mengatur z-index agar layer berada di belakang konten */
-  transition: background 4s ease;
+  opacity: 0.6;
+  filter: blur(1px);
+  z-index: 1;
+  transition: background 4s ease-in-out;
 }
 .home .home-content {
   position: relative; /* Mengatur posisi relative untuk konten */
@@ -860,7 +860,7 @@ body {
     flex-direction: column;
     align-items: center;
     transition: all 0.5s ease;
-    z-index: 999;
+    z-index: 4;
   }
   .navbar.active .menu {
     left: 0;
@@ -873,7 +873,7 @@ body {
   }
   nav.sticky .menu a:hover {
     top: 35px;
-    color: #156689;
+    color: #0e2431;
   }
   nav .navbar .login {
     padding: 10px 55px;

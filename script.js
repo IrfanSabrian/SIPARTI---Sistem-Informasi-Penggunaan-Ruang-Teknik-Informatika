@@ -1,4 +1,4 @@
-// Background Animation ------------------------------------------------------------------- 
+// Background Animation -------------------------------------------------------------------
 const backgrounds = [
   "img/assets/Background1.jpg",
   "img/assets/Background2.jpg",
@@ -26,23 +26,24 @@ function changeBackground() {
 
       // Check if the current background has been displayed twice
       if (displayCount < 2) {
-        // If less than 2 times, call changeBackground again for the same image
-        changeBackground();
+        changeBackground(); // If less than 2 times, keep the same background
       } else {
         // If displayed twice, reset the count and move to the next background
         displayCount = 0;
         currentBackground = (currentBackground + 1) % backgrounds.length;
-        changeBackground(); // Call changeBackground again for the next image
+
+        // Add a slight delay for smoother transitions when looping back to the first background
+        setTimeout(changeBackground, 100); // Wait 100ms to allow transition reset
       }
-    }, 2000); // Wait for 3 seconds
+    }, 3000); // Wait for 3 seconds between each transition
   };
 
-  // Set an optional error handling for image loading
+  // Optional error handling for image loading
   img.onerror = function () {
     console.error("Error loading image:", img.src);
 
-    // Still proceed to the next background after an error
-    displayCount = 0; // Reset display count
+    // Proceed to the next background after an error
+    displayCount = 0;
     currentBackground = (currentBackground + 1) % backgrounds.length;
     changeBackground(); // Proceed to the next image immediately
   };
