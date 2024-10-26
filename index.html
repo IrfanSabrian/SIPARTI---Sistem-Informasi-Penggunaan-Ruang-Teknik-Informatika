@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>SIPARTI</title>
-    <link rel="stylesheet" href="styless.css" />
+    <link rel="stylesheet" href="lib/styling/styless.css" />
     <link rel="icon" type="img/png" href="img/assets/Icon.png" />
     <!-- Fontawesome CDN Link -->
     <link
@@ -25,7 +25,7 @@
         </div>
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="booking.html">Booking</a></li>
+          <li><a href="jadwal.html">Jadwal</a></li>
           <li><a href="about.html">About Us</a></li>
           <div class="cancel-btn">
             <i class="fas fa-times"></i>
@@ -48,34 +48,92 @@
           <div class="text-two">SIPARTI</div>
           <div class="text-three">Sistem Informasi Penggunaan</div>
           <div class="text-three">Ruang Teknik Informatika</div>
-          <div class="text-four">Mempermudah akses informasi jadwal penggunaan</div>
-          <div class="text-four"> dan pemesanan ruang di Teknik Informatika.</div>
+          <div class="text-four">
+            Mempermudah akses informasi jadwal penggunaan
+          </div>
+          <div class="text-four">ruangan Prodi Teknik Informatika.</div>
         </div>
         <div class="button">
-          <a href="booking.html"><button>Booking Ruangan</button></a>
+          <a href="jadwal.html"><button>Lihat Jadwal</button></a>
         </div>
       </div>
     </section>
     <!-- Live Section Start -->
     <section class="live-schedule" id="">
       <div class="content">
-        <div class="title"><span>Live Schedules</span></div>
+        <div class="title"><span>Jadwal Sedang Berlangsung</span></div>
+
+        <!-- Modal Structure -->
         <div id="roomModal" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="roomTitle">Ruangan</h2>
-            <p id="roomInfo" class="room-info">Informasi ruangan...</p>
+            <div class="modal-row">
+              <!-- Kolom pertama: Gambar ruangan -->
+              <div id="modal-column-1" class="modal-column"></div>
+
+              <!-- Kolom kedua: Informasi ruangan atau pesan "Ruangan sedang tidak digunakan" -->
+              <div id="modal-column-2" class="modal-column"></div>
+
+              <!-- Kolom ketiga: Gambar denah ruangan -->
+              <div id="modal-column-3" class="modal-column"></div>
+            </div>
           </div>
         </div>
-        <div class="live">
-          <div id="current-time"></div>
+
+        <!-- Modal Keluhan -->
+        <div id="keluhanModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeKeluhanModal()">&times;</span>
+            <h3>Masukkan Keluhan Anda</h3>
+            <br />
+            <form id="keluhanForm">
+              <label for="ruangan">Ruangan TI-</label> <br />
+              <input type="text" id="ruangan" value="" readonly /> <br />
+
+              <label for="nama">Nama:</label> <br />
+              <input
+                type="text"
+                id="nama"
+                placeholder="Masukkan Nama Anda"
+                required
+              />
+              <br />
+
+              <label for="keluhan">Isi Keluhan:</label> <br />
+              <textarea
+                id="keluhan"
+                placeholder="Masukkan Keluhan Anda"
+                required
+              ></textarea>
+              <br />
+
+              <label for="gambar">Masukkan Gambar:</label> <br />
+              <input type="file" id="gambar" accept="image/*" required />
+              <br />
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  margin-top: 20px;
+                "
+              >
+                <button type="submit" id="kirimKeluhan">Kirim</button>
+              </div>
+            </form>
+          </div>
         </div>
+
+        <!-- Denah -->
+        <div id="current-time"></div>
         <div class="container">
           <div class="building theory">
             <h2>Gedung Teori</h2>
             <div class="encompassing-box">
               <div class="floor">
-                <div class="class TI1" id="TI1">TI 1</div>
+                <div class="class TI1" id="TI1" onclick="openRoomModal('TI1')">
+                  TI 1
+                </div>
                 <div class="spacer"></div>
                 <div class="R28" id="R28">Ruang 28</div>
                 <div class="R27" id="R27">Ruang 27</div>
@@ -83,16 +141,38 @@
                 <div class="AB18" id="AB18">AB 1.8</div>
                 <div class="AB19" id="AB19">AB 1.9</div>
                 <div class="spacer"></div>
-                <div class="class TI10" id="TI10">TI 10</div>
-                <div class="class TI2" id="TI2">TI 2</div>
-                <div class="class TI9" id="TI9">TI 9</div>
-                <div class="class TI3" id="TI3">TI 3</div>
-                <div class="class TI8" id="TI8">TI 8</div>
-                <div class="class TI4" id="TI4">TI 4</div>
+                <div
+                  class="class TI10"
+                  id="TI10"
+                  onclick="openRoomModal('TI10')"
+                >
+                  TI 10
+                </div>
+                <div class="class TI2" id="TI2" onclick="openRoomModal('TI2')">
+                  TI 2
+                </div>
+                <div class="class TI9" id="TI9" onclick="openRoomModal('TI9')">
+                  TI 9
+                </div>
+                <div class="class TI3" id="TI3" onclick="openRoomModal('TI3')">
+                  TI 3
+                </div>
+                <div class="class TI8" id="TI8" onclick="openRoomModal('TI8')">
+                  TI 8
+                </div>
+                <div class="class TI4" id="TI4" onclick="openRoomModal('TI4')">
+                  TI 4
+                </div>
                 <div class="spacer"></div>
-                <div class="class TI7" id="TI7">TI 7</div>
-                <div class="class TI5" id="TI5">TI 5</div>
-                <div class="class TI6" id="TI6">TI 6</div>
+                <div class="class TI7" id="TI7" onclick="openRoomModal('TI7')">
+                  TI 7
+                </div>
+                <div class="class TI5" id="TI5" onclick="openRoomModal('TI5')">
+                  TI 5
+                </div>
+                <div class="class TI6" id="TI6" onclick="openRoomModal('TI6')">
+                  TI 6
+                </div>
                 <div class="AB15" id="AB15">AB 1.5</div>
                 <div class="AB16" id="AB16">AB 1.6</div>
                 <div class="AB110" id="AB110">AB 1.10</div>
@@ -105,7 +185,13 @@
               <div class="floor">
                 <div class="ruangDosen1">Ruang Dosen</div>
                 <div class="ruangDosen2">Ruang Dosen</div>
-                <div class="class TI14" id="TI14">TI 14</div>
+                <div
+                  class="class TI14"
+                  id="TI14"
+                  onclick="openRoomModal('TI14')"
+                >
+                  TI 14
+                </div>
                 <div class="toilet">Toilet</div>
                 <div class="ruangTeknisi1">Ruang Teknisi</div>
                 <div class="stairs1" onclick="showLab2()"></div>
@@ -114,34 +200,61 @@
             <div class="encompassing-box_lab2" id="box2" style="display: none">
               <div class="floor">
                 <div class="stairs2" onclick="showLab1()"></div>
-                <div class="class TI11" id="TI11">TI 11</div>
-                <div class="class TI12" id="TI12">TI 12</div>
-                <div class="class TI13" id="TI13">TI 13</div>
+                <div
+                  class="class TI11"
+                  id="TI11"
+                  onclick="openRoomModal('TI11')"
+                >
+                  TI 11
+                </div>
+                <div
+                  class="class TI12"
+                  id="TI12"
+                  onclick="openRoomModal('TI12')"
+                >
+                  TI 12
+                </div>
+                <div
+                  class="class TI13"
+                  id="TI13"
+                  onclick="openRoomModal('TI13')"
+                >
+                  TI 13
+                </div>
                 <div class="ruangTeknisi2">Ruang Teknisi</div>
+                <div class="spacer-lab"></div>
               </div>
             </div>
-            <div class="sample">
-              <div class="color-circle red"></div>
-              <p>Sedang digunakan</p>
-            </div>
-            <div class="sample">
-              <div class="color-circle green"></div>
-              <p>Tidak digunakan</p>
-            </div>
-            <div class="sample">
-              <div class="color-circle white"></div>
-              <p>Tidak tersedia</p>
+            <div class="samples-container">
+              <div class="sample">
+                <div class="color-circle red"></div>
+                <p>Sedang digunakan</p>
+              </div>
+              <div class="sample">
+                <div class="color-circle yellow"></div>
+                <p>Sedang Istirahat</p>
+              </div>
+              <div class="sample">
+                <div class="color-circle green"></div>
+                <p>Tidak digunakan</p>
+              </div>
+              <div class="sample">
+                <div class="color-circle white"></div>
+                <p>Tidak tersedia</p>
+              </div>
+              <div class="sample">
+                <div class="color-circle orange"></div>
+                <p>Sedang Perbaikan</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Kelas Kosong Section -->
-    <section></section>
     <!-- Footer Section Start -->
     <footer>
       <div class="footer-container">
-        <img src="/img/assets/Logo.png" />
+        <img src="img/assets/Logo.png" />
         <div class="footer-content">
           <h4>Politeknik Negeri Pontianak</h4>
           <p>
@@ -184,17 +297,13 @@
         <p>&copy; 2024 SIPARTI Polnep. All rights reserved.</p>
       </div>
     </footer>
-    <script src="script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const username = localStorage.getItem("username");
-        const loginLink = document.getElementById("login-link");
-        if (username) {
-          // Tampilkan username pada tombol login dan arahkan ke dashboard.html
-          loginLink.textContent = username;
-          loginLink.href = "dashboard.html";
-        }
-      });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcrypt.js/5.0.1/bcrypt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <script src="lib/javascript/navbar.js"></script>
+    <script src="lib/javascript/background.js"></script>
+    <script src="lib/javascript/koneksi.js"></script>
+    <script src="lib/javascript/script.js"></script>
   </body>
 </html>

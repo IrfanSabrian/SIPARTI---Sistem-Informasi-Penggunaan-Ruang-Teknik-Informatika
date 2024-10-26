@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styless.css" />
+    <link rel="stylesheet" href="dashboard.css" />
     <link rel="icon" type="img/png" href="img/assets/Icon.png" />
     <!-- Fontawesome CDN Link -->
     <link
@@ -25,7 +25,7 @@
         </div>
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="schedule.html">Schedules</a></li>
+          <li><a href="jadwal.html">Schedules</a></li>
           <li><a href="about.html">About Us</a></li>
           <div class="cancel-btn">
             <i class="fas fa-times"></i>
@@ -40,160 +40,40 @@
       </div>
     </nav>
     <!-- Content Section Start -->
-<section class="dashboard-content">
     <div class="sidedashboard">
-        <button id="add-row-btn" class="add-row-btn">Add Row</button>
-        <h3>Filter by</h3>
-        
-        <!-- Filter Selection -->
-        <div id="filter">
-            <label>
-                <input type="radio" name="filter" value="none" checked> None
-            </label><br>
-            <label>
-                <input type="radio" name="filter" value="day"> Day
-            </label><br>
-            <label>
-            <label>
-                <input type="radio" name="filter" value="ruang"> Ruang
-            </label><br>
-        </div>
-        
-        <!-- Day Filter -->
-        <div id="day-filter" class="filter-option" style="display:none;">
-            
-          <br><h4>Day</h4>
-            <select id="day-select">
-                <option value="all">All Days</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-            </select>
-        </div>
-        
-        <!-- Semester Filter -->
-        <div id="semester-filter" class="filter-option" style="display:none;">
-            <br><h4>Semester</h4>
-            <select id="semester-select">
-                <option value="all">All Semesters</option>
-                <option value="Semester 2">Semester 2</option>
-                <option value="Semester 4">Semester 4</option>
-                <option value="Semester 6">Semester 6</option>
-            </select>
-        </div>
-        
-        <!-- Ruang Filter -->
-        <div id="ruang-filter" class="filter-option" style="display:none;">
-            <br><h4>Ruang</h4>
-            <select id="ruang-select">
-                <option value="all">All Ruang</option>
-                <option value="TI-1">TI-1</option>
-                <option value="TI-2">TI-2</option>
-                <option value="TI-3">TI-3</option>
-                <option value="TI-4">TI-4</option>
-                <option value="TI-5">TI-5</option>
-                <option value="TI-6">TI-6</option>
-                <option value="TI-7">TI-7</option>
-                <option value="TI-8">TI-8</option>
-                <option value="TI-9">TI-9</option>
-                <option value="TI-10">TI-10</option>
-                <option value="TI-11">TI-11</option>
-                <option value="TI-12">TI-12</option>
-                <option value="TI-13">TI-13</option>
-                <option value="TI-14">TI-14</option>
-            </select>
-        </div>
-        
-        <button id="logout-btn" class="logout-btn">Logout</button>
+      <ul class="sidebar-menu">
+        <li><a href="booking.html"><i class="fas fa-calendar-check"></i> Booking</a></li>
+        <li><a href="jadwal.html"><i class="fas fa-clock"></i> Jadwal</a></li>
+        <li><a href="jadwal-selesai.html"><i class="fas fa-check-circle"></i> Jadwal Selesai</a></li>
+        <li><a href="keluhan.html"><i class="fas fa-exclamation-circle"></i> Keluhan</a></li>
+        <li><a href="matkul.html"><i class="fas fa-book"></i> Matkul</a></li>
+        <li><a href="ruangan.html"><i class="fas fa-building"></i> Ruangan</a></li>
+        <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+        <li><button id="logout-btn" class="logout-btn">Logout</button></li>
+      </ul>
+    </div>
+    
+    
+ 
     </div>
     <div class="main-content">
-        <table id="schedule-table">
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Semester</th>
-                    <th>Kelas</th>
-                    <th>Makul</th>
-                    <th>Dosen</th>
-                    <th>Ruang</th>
-                    <th>Waktu Mulai</th>
-                    <th>Waktu Selesai</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
+        
                 <!-- Jadwal akan ditampilkan di sini -->
-            </tbody>
-        </table>
+    
     </div>
 </section>
 
-<!-- Modal Structure -->
-<div id="add-row-modal" class="modal_dash">
-  <div class="modal-content_dash">
-    <span class="close-dash">&times;</span>
-    <form id="add-row-form">
-      <label for="day">Day</label>
-      <select id="day" name="day">
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Friday">Friday</option>
-      </select>
 
-      <label for="semester">Semester</label>
-      <select id="semester" name="semester">
-        <option value="2">2</option>
-        <option value="4">4</option>
-        <option value="6">6</option>
-      </select>
 
-      <label for="class">Kelas</label>
-      <select id="class" name="class">
-        <option value="A">A</option>
-        <option value="B">B</option>
-        <option value="C">C</option>
-        <option value="D">D</option>
-        <option value="E">E</option>
-      </select>
+      
+      
 
-      <label for="course">Makul</label>
-      <input type="text" id="course" name="course" required>
+      
 
-      <label for="lecturer">Dosen</label>
-      <input type="text" id="lecturer" name="lecturer" required>
+      
 
-      <label for="room">Ruang</label>
-      <select id="room" name="room">
-        <option value="TI-1">TI-1</option>
-        <option value="TI-2">TI-2</option>
-        <option value="TI-3">TI-3</option>
-        <option value="TI-4">TI-4</option>
-        <option value="TI-5">TI-5</option>
-        <option value="TI-6">TI-6</option>
-        <option value="TI-7">TI-7</option>
-        <option value="TI-8">TI-8</option>
-        <option value="TI-9">TI-9</option>
-        <option value="TI-10">TI-10</option>
-        <option value="TI-11">TI-11</option>
-        <option value="TI-12">TI-12</option>
-        <option value="TI-13">TI-13</option>
-        <option value="TI-14">TI-14</option>
-      </select>
-
-      <label for="start-time">Waktu Mulai</label>
-      <input type="time" id="start-time" name="start-time" required>
-
-      <label for="end-time">Waktu Selesai</label>
-      <input type="time" id="end-time" name="end-time" required>
-
-      <button type="submit" id="save-btn">Save</button>
-    </form>
-  </div>
-</div>    
+      
+  
 <!-- Footer Section Start -->
     <footer>
       <div class="footer-container">
