@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard - SIPARTI</title>
+    <link rel="stylesheet" href="lib/styling/styless.css" />
+    <link rel="icon" type="image/png" href="img/assets/Icon.png" />
+
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img/assets/Logo.png" alt="Logo" /></a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jadwal.html">Jadwal</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="login">
+          <a id="login-link" href="login.html">Login</a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Content Section Start -->
+    <div class="layout">
+      <!-- Modal Check -->
+      <div id="successModal" class="success-modal">
+        <div class="success-content">
+          <span class="checkmark"><i class="fas fa-check"></i></span>
+          <p>Data berhasil diperbarui</p>
+        </div>
+      </div>
+
+      <!-- Modal cross -->
+      <div id="failedModal" class="failed-modal">
+        <div class="failed-content">
+          <span class="checkmark"><i class="fas fa-times"></i></span>
+          <p>Data Gagal diperbarui</p>
+        </div>
+      </div>
+
+      <!-- Modal not compatible -->
+      <div id="notCompatibleModal" class="notCompatible-modal">
+        <div class="notCompatible-content">
+          <span class="checkmark"><i class="fas fa-times"></i></span>
+          <p>Data Tidak Compatible</p>
+        </div>
+      </div>
+
+      <!-- Modal untuk Tambah Data -->
+      <div id="insert-modal" style="display: none">
+        <div class="modal-insert-dash">
+          <span
+            class="close"
+            onclick="document.getElementById('insert-modal').style.display='none'"
+            >&times;</span
+          >
+          <h2>Tambah Data Tabel <span id="modal-table-name"></span></h2>
+          <div id="modal-fields-insert"></div>
+          <button id="save-insert-button">Simpan</button>
+        </div>
+      </div>
+
+      <!-- Modal untuk Edit Data -->
+      <div id="edit-modal" style="display: none">
+        <div class="modal-edit-dash">
+          <span
+            class="close"
+            onclick="document.getElementById('edit-modal').style.display='none'"
+            >&times;</span
+          >
+          <h2>Edit Data Tabel <span id="modal-table-name"></span></h2>
+          <div id="modal-fields-edit"></div>
+          <!-- Pastikan modalFields ada di sini -->
+          <button id="save-edit-button">Simpan</button>
+        </div>
+      </div>
+
+      <!-- Modal untuk Konfirmasi Hapus -->
+      <div id="delete-modal" style="display: none">
+        <div class="modal-delete-dash">
+          <p>Apakah Anda yakin ingin menghapus data ini?</p>
+          <div class="modal-action">
+            <button id="confirm-delete" class="btn-confirm">Hapus</button>
+            <button id="cancel-delete" class="btn-cancel">Batal</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for CSV Import -->
+      <div id="csv-modal" style="display: none">
+        <div class="modal-csv-dash">
+          <span
+            class="close"
+            onclick="document.getElementById('csv-modal').style.display='none'"
+            >&times;</span
+          >
+          <h2>Insert Data dari CSV</h2>
+          <br />
+          <p>Pastikan baris pertama berisi judul kolom tabel.</p>
+          <p>Pastikan setiap data memiliki ID yang unik, tanpa ada duplikasi.</p>
+          <p>Periksa agar tidak ada baris kosong.</p>
+          <p>Pastikan format file CSV sesuai dengan standar yang ditentukan.</p> <br>
+          <p><strong>Contoh format CSV:</strong></p>
+          <table id="example-csv" class="example-csv"></table>
+          <p>Upload file CSV</p>
+          <input type="file" id="csv-upload" accept=".csv" />
+          <div id="csv-preview" style="margin-top: 20px"></div>
+          <br />
+          <button id="import-csv-button" class="btn-confirm">
+            Insert Data
+          </button>
+        </div>
+      </div>
+
+      <!-- Sidebar with Menu -->
+      <div class="sidebar">
+        <div class="sidebar-toggle">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#" data-target="table-dosen"
+              ><i class="fas fa-chalkboard-teacher"></i> Dosen</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="table-jadwal"
+              ><i class="fas fa-clock"></i> Jadwal</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="table-keluhan"
+              ><i class="fas fa-exclamation-circle"></i> Keluhan</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="table-kritik"
+              ><i class="fas fa-comment"></i> Kritik & Saran</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="table-matkul"
+              ><i class="fas fa-book"></i> Matkul</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="table-ruangan"
+              ><i class="fas fa-building"></i> Ruangan</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="table-users"
+              ><i class="fas fa-users"></i> Users</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="database-table" id="welcome-message">
+      <div id="table-content"></div>
+    </div>
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="footer-container">
+        <img src="img/assets/Logo.png" alt="Footer Logo" />
+        <div class="footer-content">
+          <h4>Politeknik Negeri Pontianak</h4>
+          <p>
+            <i class="bx bx-home-circle"></i> Jl. Jenderal Ahmad Yani, Bansir
+            Laut, Pontianak Tenggara, Kota Pontianak, Kalimantan Barat 78124
+          </p>
+          <p><i class="bx bx-envelope"></i> sipartipolnep@gmail.com</p>
+        </div>
+        <div class="footer-content">
+          <h4>Contact Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bx-envelope"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-tiktok"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <p>&copy; 2024 SIPARTI Polnep. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcrypt.js/5.0.1/bcrypt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.js"></script>
+    <script src="lib/javascript/navbar.js"></script>
+    <script src="lib/javascript/koneksi.js"></script>
+    <script src="lib/javascript/dashboard.js"></script>
+    <script src="lib/javascript/sidebar.js"></script>
+    <script src="lib/javascript/dropdown.js"></script>
+  </body>
+</html>

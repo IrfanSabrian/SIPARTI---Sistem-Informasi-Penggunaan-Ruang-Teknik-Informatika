@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kontak - SIPARTI</title>
+    <link rel="stylesheet" href="lib/styling/styless.css" />
+    <link rel="icon" type="img/png" href="img/assets/Icon.png" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="img/assets/Logo.png" alt="Logo" /></a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jadwal.html">Jadwal</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="login">
+          <a id="login-link" href="login.html">Login</a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+    <div class="layout">
+      <!-- Modal Check -->
+      <div id="successModal" class="success-modal">
+        <div class="success-content">
+          <span class="checkmark"><i class="fas fa-check"></i></span>
+          <p>Kritik dan Saran Anda berhasil terkirim</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal cross -->
+    <div id="failedModal" class="failed-modal">
+      <div class="failed-content">
+        <span class="checkmark"><i class="fas fa-times"></i></span>
+        <p>Data Gagal diperbarui</p>
+      </div>
+    </div>
+
+    <!-- Konten Kontak -->
+    <section class="contact" id="contact">
+      <div class="content">
+        <div class="title"><span>Hubungi Kami</span></div>
+        <div class="contact-details">
+          <div class="contact-info">
+            <h2>Kontak SIPARTI</h2>
+            <p>
+              Terima kasih atas minat Anda pada SIPARTI. Jika Anda memiliki
+              pertanyaan, saran, atau masukan, kami akan senang mendengar dari
+              Anda!
+            </p>
+            <h2>Informasi Kontak</h2>
+            <a href="https://maps.app.goo.gl/kYusyXUXfgyEqBL8A" target="_blank">
+              <p>
+                <i class="bx bx-home-circle"></i> Jl. Jenderal Ahmad Yani,
+                Bansir Laut, Pontianak Tenggara, Kota Pontianak, Kalimantan
+                Barat 78124
+              </p>
+            </a>
+            <a href="mailto:sipartipolnep@gmail" target="_blank"
+              ><p>
+                <i class="bx bx-envelope"></i> Email: Sipartipolnep@gmail.com
+              </p></a
+            >
+            <p><i class="bx bxl-whatsapp"></i> WhatsApp: +62 812-3456-7890</p>
+          </div>
+
+          <!-- Formulir Kontak -->
+          <div class="contact-form">
+            <h3>Kritik dan Saran</h3>
+            <div class="input-group">
+              <label for="name">Nama</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nama Anda"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="message">Pesan</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tulis pesan Anda di sini..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Kirim</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="footer-container">
+        <img src="img/assets/Logo.png" />
+        <div class="footer-content">
+          <h4>Politeknik Negeri Pontianak</h4>
+          <p>
+            <i class="bx bx-home-circle"></i> Jl. Jenderal Ahmad Yani, Bansir
+            Laut, Pontianak Tenggara, Kota Pontianak, Kalimantan Barat 78124
+          </p>
+          <p><i class="bx bx-envelope"></i> sipartipolnep@gmail.com</p>
+        </div>
+        <div class="footer-content">
+          <h4>Contact Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bx-envelope"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-tiktok"></i></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="bx bxl-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <p>&copy; 2024 SIPARTI Polnep. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <script src="lib/javascript/navbar.js"></script>
+    <script src="lib/javascript/koneksi.js"></script>
+    <script src="lib/javascript/kontak.js"></script>
+    <script src="lib/javascript/dropdown.js"></script>
+  </body>
+</html>
